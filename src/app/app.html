@@ -1,0 +1,8 @@
+<h1>Account</h1>
+<p id="profile">{{ profile()?.name }} · {{ profile()?.email }} · {{ profile()?.plan }}</p>
+<p id="orders">{{ orders()?.length ?? 0 }} orders</p>
+<ul id="catalog">
+  @for (p of catalog.value() ?? []; track p.sku) {
+    <li>{{ p.name }}</li>
+  }
+</ul>
