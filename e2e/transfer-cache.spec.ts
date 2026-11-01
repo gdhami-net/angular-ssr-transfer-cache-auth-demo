@@ -60,6 +60,7 @@ test('with the flag on, the user\'s data sits in the HTML and the HTML has no Ca
   expect(state).toContain('"email":"alice@example.com"');
   expect(state).toContain('Desk lamp');
   expect(state).not.toContain('1042'); // the private orders response
+  expect(state).not.toContain('alice-token'); // the response is there, the token isn't
   expect(cacheControl).toBeUndefined();
 });
 
